@@ -18,7 +18,7 @@
 #  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 #  DEALINGS IN THE SOFTWARE.
 
-#from itertools import izip
+
 from random    import normalvariate, random
 from datetime  import timedelta, datetime
 
@@ -31,9 +31,9 @@ import json
 import re
 import threading
 
-#from BaseHTTPServer import BaseHTTPRequestHandler,HTTPServer
+
 import http.server
-from socketserver   import ThreadingMixIn
+from socketserver import ThreadingMixIn
 
 ################################################################################
 #
@@ -202,7 +202,7 @@ def get(req_handler, routes):
                 req_handler.wfile.write(bytes(data,  encoding = 'utf-8'))
                 return
 
-def run(routes, host = '0.0.0.0', port = 8080):
+def run(routes, host = '0.0.0.0', port = 8085):
     """ Runs a class as a server whose methods have been decorated with
         @route.
     """
